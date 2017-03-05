@@ -1,0 +1,190 @@
+.bookTraining-modal, .promotions-form {
+    max-width: 320px;
+    margin:0 auto;
+    padding: 0 48px;
+    background-color: white;
+    position: relative;
+}
+
+.bookTraining-modal__heading {
+    text-align: center;
+    font-size: 22px;
+    padding: 30px 0;
+}
+
+.bookTraining-modal__text {
+    margin-bottom: -10px;
+    font-size: 14px;
+    color: main-black;
+}
+
+.bookTraining-modal__input {
+    margin-bottom: 10px;
+    padding: 0 10px;
+    
+    background-color: white;
+}
+
+.bookTraining-modal__input_mapMarker {
+    position: relative;
+}
+
+.bookTraining-modal__input_mapMarker:before {
+    content: "\f041";
+    position: absolute;
+    color: gray; 
+}
+
+////////////////////////////////////////////
+
+.feedback-textarea {
+    min-height: 200px;
+    max-width: 243px;
+}
+
+.feedback-file-upload {
+    position: relative;
+}
+
+.file_upload {
+    position: relative;
+    // overflow: hidden;
+}
+
+.file-upload__text{
+    position: absolute;
+    top: 30px;
+}
+
+.file-upload__input {
+    padding: 0;
+    margin: 0;
+
+    position: absolute;
+    top: 0;
+
+    letter-spacing: 10em;     /* IE 9 fix */
+    -ms-transform: scale(20); /* IE 9 fix */
+    opacity: 0;
+    cursor: pointer
+}
+
+
+///////////////////////////////////////////////////////
+
+.promotions-form {
+    padding: 0 30px;
+
+    &__heading {
+        text-align: center;
+        font-size: 22px;
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    &__infoBox {
+        text-align: center;
+    }
+
+}
+
+.infoBox {
+
+    &__heading {
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    &__date {
+
+    }
+}
+
+#google-map {
+    max-width: 270px;
+    height: 130px;
+    margin: 0 auto;
+}
+
+///////////////////////////////////////////////////////
+.order-textarea {
+    max-width: 320px;
+    min-height: 100px;
+}
+
+.order-modal {
+
+  &-checkbox {
+    position: relative;
+  }
+
+  &__check {
+    cursor: pointer;
+    width: 20px;
+  }
+  
+  // default check-box
+
+  &__check:not(checked) {
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    height: 21px;
+    width: 21px;
+  }
+  
+  // custom check-box
+
+  &__check:not(checked) +  .order-modal__inner{
+  }
+
+  &__check:not(checked) +  .order-modal__inner:before{
+    content: '';
+    position: absolute;
+    top: 4px;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 10px;
+    background-color: white;
+
+    border: 2px solid main-black;
+  }
+
+  &__check:not(checked) +  .order-modal__inner:after{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 4px;
+    width: 7px;
+    height: 7px;
+    opacity: 0;
+    border-radius: 150%;
+    background-color: main-black;
+    transition: all .2s;
+  }
+
+  &__check:checked +  .order-modal__inner:after{
+    opacity: 1;
+  }
+}
+
+ // check-box
+
+ .order-modal-checkbox__text {
+     margin-left: 15px;
+     display: inline-block;
+     color: main-black;
+     font-size: 16px;
+ }
+
+ .order-modal-checkbox__description {
+     color: main-black;
+     font-size: 10px;
+ }
+
+ .supOrder-modal {
+    margin-top: 10%;
+    margin-bottom: 15%;
+ }

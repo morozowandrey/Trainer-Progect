@@ -1,0 +1,297 @@
+.header-calendar-button, .about-me__button, .plan-bookButton{
+        padding: 0px 5px 2px 40px;
+        margin-left: 20px;
+
+        border-radius: 10px;
+        border: 3px solid white;
+
+        display: inline-block;
+        text-align: center;
+        line-height: 15px;
+        position: relative;
+    }
+
+    .header-calendar-button:before, .about-me__button:before, .plan-bookButton::before{
+        position: absolute;
+        top: 6px;
+        left: 8px;
+
+        content: "\f073";
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        font-family: FontAwesome;
+        font-size:24px;
+        color: white;
+    }
+    
+.calendar-button__text {
+    text-decoration: none;
+
+    color: white;
+    font-family: main-ff;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+ .header-calendar-button:hover{
+    background-color: white;
+    text-decoration: none;
+ }
+ .header-calendar-button:hover:before{
+    color: gray;
+ }
+ .header-calendar-button:hover  .calendar-button__text{
+    color: gray;
+ }
+
+///////////////////////////////////////////////////
+
+     .header-button {
+        border: 3px solid white;
+        border-radius: 25px;
+
+        padding: 0px 22px;
+        margin-bottom: 109px;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .header-button:hover, .about-me__button:hover, .plan-bookButton:hover{
+        color: main-black;
+        background-color: white;
+        text-decoration: none;
+
+    }
+
+//////////////////////////////////////////////
+
+.about-me__button, .plan-bookButton {
+    background-color: yello;
+    color: main-black;
+
+    padding: 15px 5px 10px 35px;
+    margin: 0;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 14px;
+
+    border-radius: 0;
+    border: none;
+
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.4);
+}
+
+.about-me__button:before , .plan-bookButton::before{
+    content: "\f271";
+    color: main-black;
+    top: 12px;
+}
+
+.about-me__button:hover, .plan-bookButton:hover{
+    border-bottom: 3px solid main-black;
+    background-color: yello;
+
+    text-decoration: none;
+    outline: none;
+}
+
+.about-me__button:focus {
+    color: main-black;
+
+    text-decoration: none;
+    outline: none;
+}
+
+///////////////////////////////////////////////////
+
+.plan-vievButton {
+    margin: 0 0 20px 0;
+
+    color: yello;
+    text-decoration: none;
+
+    position: relative;
+    left: 17px;
+    top: -5px;
+    width: 155px;
+    font-size: 11px;
+}
+
+.plan-vievButton:before {
+    position: absolute;
+    left: -17px;
+    top: 1px;
+
+    color: yello;
+
+    content: "\f055";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-family: FontAwesome;
+}
+
+.plan-vievButton:hover {
+    text-decoration: none;
+    color: yello;
+
+    border-bottom: 2px solid yello;
+}
+
+.plan-bookButton {
+    float: right;
+    width: 140px;
+    
+    margin: -10px 80px 0px 0;
+    padding: 10px 0px 10px 24px;
+
+    box-shadow: none;
+    border-radius: 1px;
+    border: 2px solid yello-dark;
+    font-size: 10px;
+}
+.plan-bookButton::before {
+    left: 2px;
+    top: 10px;
+}
+
+///////////////////////////////////////////////////
+
+.promotion-content__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 60px;
+    height: 20px;
+
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    color: main-black;
+    background-color: yello;
+    border: 1px solid yello-light;
+
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.45);
+}
+.promotion-content__button:focus {
+    outline: none;
+    text-decoration: none;
+    color: main-black;
+}
+.promotion-content__button:hover {
+    text-decoration: none;
+    color: main-black;
+
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+///////////////////////////////////////////////////
+
+.contacts-button {
+    padding: 5px 25px;
+    border: 2px solid main-black;
+    border-radius: 10px;
+    background-color: gray-dark2;
+    color: main-black;
+
+    font-size: 20px;
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.contacts-button:hover, .contacts-button:focus {
+    color: main-black;
+    text-decoration: none;
+    
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+///////////////////////////////////////////////////
+
+.product-button {
+    padding: 5px 25px;
+    border-radius: 20px;
+    border: 1px solid main-black;
+    color: main-black;
+
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.product-button:hover {
+    background-color: gray-dark;
+    color: gray-light;
+    text-decoration: none;
+    
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.product-button:focus {
+    outline: none;
+    text-decoration: none;
+    color: main-black;
+}
+
+///////////////////////////////////////////////////
+
+.bookTraining-modal__sendButton, .promotions-form__button {
+    background-color: white;
+    margin-left: 70%;
+    border: 2px solid main-black;
+    margin-top: 30%;
+    margin-bottom: 20%;
+    outline: none;
+
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.bookTraining-modal__sendButton:hover, .promotions-form__button:hover {
+    box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+}
+///////////////////////////////////////////////////
+#feedback-form__button {
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+
+}
+
+.file-upload__button{
+    float: left;
+    height: 100%;
+}
+
+///////////////////////////////////////////////////
+
+.promotions-form__button {
+    margin: 15% 0 25% 35%;
+    border: 2px solid #1c1c1f;
+    width: 60px;
+    text-transform: uppercase;
+}

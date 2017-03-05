@@ -1,0 +1,361 @@
+.header{
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 5;
+
+    &-contacts {
+    
+        &__left {
+            color: white;
+            margin-top: 5px;
+
+            float: left;
+            display: flex;
+            align-items: center;
+        }
+
+        &__right {
+            color: white;
+
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        
+            float: right;
+        }
+
+        &__phone {
+            display: inline-block;
+            margin: 0 0 0 10px;
+            font-family: secondary-ff;
+            font-size: 18px;
+        }
+
+        &__phoneIcon {
+            margin-left: 10px;
+        }
+
+        &__langEn, &__langRu {
+            display: inline-block;
+            margin: 0 0 0 10px;
+
+            font-family: secondary-ff;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        &__langEn {
+            margin: 0 0 0 30px;
+        
+        }
+
+        &__rightSocials {
+            margin-left: 10px;
+            color: white;
+        }
+
+        &__rightSocials:first-of-type {
+            margin-left: 0px;
+        }
+
+        &__rightSocials:hover {
+            color: white;
+        }
+
+        &__whatsapp {
+            cursor: pointer;
+        }
+
+        &__phoneIcon {
+            cursor: pointer;
+        }
+    }
+
+    &-nav-box__wrapper {
+        background-color: main-black;
+        // margin-bottom: 8%;
+        position: absolute;
+    width: 100%;
+    }
+
+    &-nav-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-nav {
+
+        &__item {
+            padding: 20px 5px;
+            
+            color: white;
+
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        &__item:hover {
+            background-color: rgba(100, 100, 100, 0.7);
+            opacity: 0.8;
+            color: white;
+            text-decoration: none;
+        }
+
+        &_mobile-open {
+            display: none;
+            padding-right: 3%;
+
+            color: white;
+        }
+    }
+
+    &-logo {
+        padding: 10px 0px 10px 25px;
+
+        &__link {
+            text-decoration: none;
+        }
+
+        &__link:hover {
+            text-decoration: none;
+        }
+    }
+
+    &-caption {
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 0 0 1px white;
+        font-size: 55px;
+        font-weight: 600;
+
+        color: white;
+
+        padding-bottom: 7%;
+        margin: 0;
+    }
+
+    &-offer-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 180px;
+    }
+
+    &-offer-list {
+        margin-bottom: 40px;
+        
+        &__item {
+            color: white;
+            font-size: 35px;
+            font-weight: 400;
+        }
+    }
+
+    &-oldPrice {
+        font-size: 27px;
+        position: relative;
+        bottom: 15px;
+        margin-left: 10px;
+        color: #f0e1e1;
+    }
+
+    &-oldPrice:before {
+        border-bottom: 3px solid #f0e1e1;
+        position: absolute;
+        content: "";
+        width: 65px;
+        height: 100%;
+        right: -15%;
+        transform: rotate(-30deg);
+    }
+}
+
+.header .header-contacts {
+    height: 50px;
+}
+
+.header-nav_mobile-close {
+        padding-right: 3%;
+        z-index: 17;
+        right: 0;
+        position: absolute;
+
+        color: white;
+    }
+
+    .visible {
+        display: flex !important;
+    }
+
+    .hidden {
+        display: none;
+    }
+//////////////////////////////////// ADAPTIVE //////////////////////////////////////
+@media screen and (max-width: 1400px){
+    .header-caption {
+        font-size: 5rem;
+        padding-bottom: 3%;
+    }
+
+    .header-offer-list {
+        margin-bottom: 20px;
+    }
+
+    .header-offer-list__item {
+        font-size: 30px;
+    }
+
+    .header-button {
+
+    }
+
+    .header-oldPrice:before {
+        height: 75%;
+    }
+
+}
+
+@media screen and (max-width: 1280px){
+
+    .header-offer-box {
+        margin-top: 150px;
+    }
+
+}
+
+@media screen and (max-width: 1160px){
+    
+    .header-nav-box__wrapper {
+        margin-bottom: 4%;
+    }
+
+    .header-caption {
+        font-size: 4rem;
+        padding-bottom: 3%;
+    }
+
+    .header-offer-list {
+        margin-bottom: 20px;
+    }
+
+    .header-offer-list__item {
+        font-size: 2.5rem;
+    }
+
+    .header-offer-box {
+        margin-top: 100px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    #carousel .simg {
+        height: 450px;
+    }
+
+    .header-contacts__left {
+        padding-left: 3%;
+    }
+
+    .header-contacts__right {
+        padding-right: 3%;
+    }
+
+    .header-nav {
+        padding-right: 3%;
+    }
+
+    .header-nav__item {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    #carousel .simg {
+        height: 380px;
+    }
+
+    .header-nav-box__wrapper {
+        margin-bottom: 8%;
+    }
+
+    .header-caption {
+        font-size: 3rem;
+        padding-bottom: 7%;
+    }
+
+    .header-offer-list__item {
+        font-size: 2rem;
+    }
+
+    .header-contacts {
+        display: none;
+    }
+    
+    .header-nav {
+        width: 100%;
+
+        padding-right: 0;
+
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 16;
+
+        background-color: main-black;
+    }
+
+    .header-nav__item {
+        font-size: 16px;
+    }
+
+    .header-nav__item:first-of-type {
+        margin-top: 50px;
+    }
+
+    .header-nav_mobile-open {
+        display: inherit;
+    }
+
+    .header-oldPrice {
+        font-size: 2rem;
+        z-index: -1;
+    }
+
+    .header-oldPrice:before {
+        height: 75%;
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+
+    .header-caption {
+        font-size: 2.5rem;
+        padding: 0 10px 5%;
+    }
+
+    .header-offer-list__item {
+        font-size: 1.5rem;
+    }
+}
+
+
+.fixed-nav {
+	position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}

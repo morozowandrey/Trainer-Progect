@@ -1,0 +1,29 @@
+.header-sup {
+    background-image: url("../images/pack.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding-bottom: 35%;
+}
+
+.header-contacts_sup {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &_bg {
+        background-color: gray-light;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .header-contacts_sup {
+        display: none;
+    }
+
+    .header-sup {
+        padding-bottom: 50%;
+    }
+}

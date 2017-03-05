@@ -1,0 +1,104 @@
+.promotions {
+    position: relative;
+    padding-bottom: 65px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-heading {
+        font-weight: 400;
+        font-size: 4rem;
+        margin: 95px 0 70px 0;
+    }
+}
+
+.promotion {
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-days {
+        position: absolute;
+        top: 0;
+
+        padding: 6px 17px;
+        background-color: blue;
+        text-align: center;
+        cursor: default;
+
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+
+        &__day {
+            color: white;
+            font-size: 26px;
+        }
+
+        &__text {
+            color: white;
+            font-size: 18px;
+        }
+    }
+
+    &-content {
+        padding: 0 0 0 135px;
+
+        &__caption {
+            margin: 0 0 10px 0;
+        }
+
+        &__dates {
+            margin: 0 0 20px 0;
+        }
+
+        &__text {
+            width: 80%;
+            margin-bottom: 30px;
+            
+            color: gray;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .promotions {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .promotions-days {
+        padding: 3px 13px;
+    }
+
+    .promotion-content__text {
+        width: 65%;
+    }
+
+    .promotion-content {
+        padding: 0;
+    }
+
+    .promotions-heading {
+        font-size: 3rem;
+        margin: 95px 0 50px 0;
+        text-align: center;
+    }
+
+    .promotion-days {
+        top: 85px;
+        right: 0;
+    }
+}
+
+.slick-cloned {
+    height: 355px !important;
+}

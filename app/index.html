@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Personal trainer</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- build:css styles/main.css -->
+		<link rel="stylesheet" href="styles/main.css">
+
+		<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+		<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme-feedbacks.css">
+		<link rel="stylesheet" type="text/css" href="styles/gallery-slider.css"/>
+
+		<link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<!--endbuild-->
+	</head>
+
+	<body>
+		<header onmousedown="return false" onselectstart="return false">s
+				<div class="header">
+					<div class="header-contacts wrapper">
+							<div class="header-contacts__left">
+								<i class="fa fa-whatsapp fa-2x header-contacts__whatsapp" aria-hidden="true"></i>
+								<i class="fa fa-phone fa-2x header-contacts__phoneIcon" aria-hidden="true"></i>
+								<i class="fa fa-skype fa-2x header-contacts__phoneIcon" aria-hidden="true"></i>
+								<p class="header-contacts__phone">305-680-2247</p>
+								<a href="#book-form" class="header-calendar-button"><span class="calendar-button__text">book online <br>training</span></a>
+
+								<div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
+									<form id="book-form" class="bookTraining-modal">
+										<p class="bookTraining-modal__heading">Write your info</p>
+										<p class="bookTraining-modal__text">Name:</p><br>
+										<input class="bookTraining-modal__input" type="text" name="name"><br>
+										<p class="bookTraining-modal__text">Phone:</p><br>
+										<input class="bookTraining-modal__input" type="text" name="phone"><br>
+										<p class="bookTraining-modal__text">Adress:</p><br>
+										<input class="bookTraining-modal__input bookTraining-modal__input_mapMarker" type="text" name="adress"><br>
+										<button class="bookTraining-modal__sendButton">Send</button>
+									</form>
+								</div>
+								
+							</div>
+							<div class="header-contacts__right">
+								<a href="" class="header-contacts__rightSocials"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+								<a href="" class="header-contacts__rightSocials"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+								<a href="" class="header-contacts__rightSocials"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+								<a href="" class="header-contacts__rightSocials"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a>
+								<a href=""><p class="header-contacts__langEn">en</p></a>
+								<a href=""><p class="header-contacts__langRu">ru</p></a>
+							</div>
+					</div>
+					<div>
+					<div class="header-nav-box__wrapper">
+						<div class="header-nav-box wrapper">
+							<a href="#" class="header-logo__link"><img src="images/logo.png" alt="Logo" class="header-logo"></a>
+							<div class="header-nav_mobile-open"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+							<div class="header-nav_mobile-close hidden"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
+							<nav class="header-nav">
+								<a href="#about-me" class="header-nav__item">About me</a>
+								<a href="#classes" class="header-nav__item">Classes</a>
+								<a href="" class="header-nav__item">Suplements</a>
+								<a href="#feedbacks" class="header-nav__item">Feedbacks</a>
+								<a href="#gallery" class="header-nav__item">Gallery</a>
+								<a href="#contacts" class="header-nav__item">Contacts</a>
+							</nav>
+						</div>
+					</div>
+					</div>
+					<div class="header-offer-box">
+						<h1 class="header-caption">your personal trainer</h1>
+						<ul class="header-offer-list">
+							<li class="header-offer-list__item">Online training 50% off <span class="header-actualPrice">299</span><span class="header-oldPrice">599</span></li>
+							<li class="header-offer-list__item">Order now and get free nutrition plan</li>
+						</ul>
+						<a href="#consultation-form" class="header-button">GET FREE<br>CONSULTATION</a>
+
+						<div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
+							<form id="consultation-form" class="bookTraining-modal">
+								<p class="bookTraining-modal__heading">Write your info</p>
+								<p class="bookTraining-modal__text">Name:</p><br>
+								<input class="bookTraining-modal__input" type="text" name="name"><br>
+								<p class="bookTraining-modal__text">Phone:</p><br>
+								<input class="bookTraining-modal__input" type="text" name="phone"><br>
+								<p class="bookTraining-modal__text">Email:</p><br>
+								<input class="bookTraining-modal__input" type="email" name="email"><br>
+								<button class="bookTraining-modal__sendButton">Send</button>
+							</form>
+						</div>
+						
+					</div>
+				</div>
+			
+				<div id="carousel" class="carousel slide">
+					<div class="carousel-inner" role ="listbox">
+						<div class="item active">
+							<img class="simg" src="images/header-bg.png" alt="If you reading this it`s too late">
+						</div>
+						<div class="item">
+							<img class="simg" src="images/header-bg.png" alt="If you reading this it`s too late">
+						</div>
+						<div class="item">
+							<img class="simg" src="images/header-bg.png" alt="If you reading this it`s too late">
+						</div>
+					</div>
+					<ol class="carousel-indicators">
+						<li class="active" data-target="#carousel" data-slide-to="0"></li>
+						<li data-target="#carousel" data-slide-to="1"></li>
+						<li data-target="#carousel" data-slide-to="2"></li>
+					</ol>
+
+					<!--navigation-->
+
+					<!--<a href="#carousel" class="left carousel-control" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a href="#carousel" class="right carousel-control" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>-->
+
+				</div>
+		</header>
+
+		<section class="about-me" id="about-me">
+			<div class="wrapper">
+				<div class="about-me_center flex">
+					<img src="images/trainer.png" alt="tariner-image" class="about-me__img">
+
+					<div class="about-me-box">
+						<h3 class="about-me__heading">About me</h3>
+
+						<div class="about-me__countries">
+							<div class="country-box">
+								<p class="country-name">Ukraine <br><span class="country-city">Kiyv</span></p>
+							</div>
+							<div class="country-box">
+								<p class="country-name">UK <br><span class="country-city">London</span></p>
+							</div>
+							<div class="country-box">
+								<p class="country-name">USA <br><span class="country-city">Baltimor</span></p>
+							</div>
+							<div class="country-box">
+								<p class="country-name">UAE <br><span class="country-city">Abu-Dhabi</span></p>
+							</div>
+							<div class="country-box">
+								<p class="country-name">USA <br><span class="country-city">Miami</span></p>
+							</div>
+							<div class="country-box">
+								<p class="country-name--clients">118 <br><span class="country-city--clients">clients<br>satsfied</span></p>
+							</div>
+						</div>
+						<div class="country-box_mobile">
+							<p class="country-name--clients_mobile">118 <br><span class="country-city--clients_mobile">clients<br>satsfied</span></p>
+						</div>
+
+						<p class="about-me__text">
+							There are many variations of passages of 
+							Lorem Ipsum available, but the majority have
+							suffered alteration in some form, by injected 
+							humour, or randomised words which don't look 
+							even slightly believable. If you are going to use 
+							a passage of Lorem Ipsum, you need to be sure
+							there isn't  the Internet.
+						</p>
+						<a href="#book-form" class="about-me__button">book the training</a>
+
+						<div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
+							<form id="book-form" class="bookTraining-modal">
+								<p class="bookTraining-modal__heading">Write your info</p>
+								<p class="bookTraining-modal__text">Name:</p><br>
+								<input class="bookTraining-modal__input" type="text" name="name"><br>
+								<p class="bookTraining-modal__text">Phone:</p><br>
+								<input class="bookTraining-modal__input" type="text" name="phone"><br>
+								<p class="bookTraining-modal__text">Adress:</p><br>
+								<input class="bookTraining-modal__input bookTraining-modal__input_mapMarker" type="text" name="adress"><br>
+								<button class="bookTraining-modal__sendButton">Send</button>
+							</form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="training wrapper flex" id="classes">
+			<img src="images/trainer2.png" alt="trainer image" class="training-trainer">
+			<img src="images/trainer-full.png" alt="trainer image" class="training-trainer_mobile">
+			<div class="training-plans-box">
+				<div class="training-plan-box">
+					<div class="plan">
+						<img src="images/athlete-1.png" alt="Body building image" class="plan-img">
+						<div class="plan-heading">
+							<h4 class="plan-heading__caption">Body building</h4>
+							<div class="plan-heading__price">$130</div>
+						</div>
+						<p class="plan-text">There are many variations of 
+							passages of Lorem Ipsum available,
+							but the majority suffered alteration 
+							are many variations of passages 
+							of Lorem Ipsum available,but 
+							the majority suffered alterationare 
+							many variation of passages of 
+							Lorem Ipsum available,but the 
+							majority suffered alteration.
+						</p>
+						<a href="" class="plan-vievButton">VIEW THIS TRAINING</a>
+						<a href="#book-form" class="plan-bookButton">book the training</a>
+
+						<div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
+							<form id="book-form" class="bookTraining-modal">
+								<p class="bookTraining-modal__heading">Write your info</p>
+								<p class="bookTraining-modal__text">Name:</p><br>
+								<input class="bookTraining-modal__input" type="text" name="name"><br>
+								<p class="bookTraining-modal__text">Phone:</p><br>
+								<input class="bookTraining-modal__input" type="text" name="phone"><br>
+								<p class="bookTraining-modal__text">Adress:</p><br>
+								<input class="bookTraining-modal__input bookTraining-modal__input_mapMarker" type="text" name="adress"><br>
+								<button class="bookTraining-modal__sendButton">Send</button>
+							</form>
+						</div>
+
+					</div>
+				</div>
+				<div class="training-plan-box">
+					<div class="plan">
+						<img src="images/athlete-2.png" alt="Body building image" class="plan-img">
+						<div class="plan-heading">
+							<h4 class="plan-heading__caption">Body building</h4>
+							<div class="plan-heading__price plan-heading__price_second">$130</div>
+						</div>
+						<p class="plan-text">There are many variations of 
+							passages of Lorem Ipsum available,
+							but the majority suffered alteration 
+							are many variations of passages 
+							of Lorem Ipsum available,but 
+							the majority suffered alterationare 
+							many variation of passages of 
+							Lorem Ipsum available,but the 
+							majority suffered alteration.
+						</p>
+						<a href="" class="plan-vievButton">VIEW THIS TRAINING</a>
+					</div>
+				</div>
+				<div class="training-plan-box">
+					<div class="plan plan_lust">
+						<img src="images/athlete-3.png" alt="Body building image" class="plan-img">
+						<div class="plan-heading">
+							<h4 class="plan-heading__caption">Body building</h4>
+							<div class="plan-heading__price plan-heading__price_third">$130</div>
+						</div>
+						<p class="plan-text">There are many variations of 
+							passages of Lorem Ipsum available,
+							but the majority suffered alteration 
+							are many variations of passages 
+							of Lorem Ipsum available,but 
+							the majority suffered alterationare 
+							many variation of passages of 
+							Lorem Ipsum available,but the 
+							majority suffered alteration.
+						</p>
+						<a href="" class="plan-vievButton">VIEW THIS TRAINING</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="feedbacks wrapper" id="feedbacks">
+			<h2 class="feedbacks-heading">Feedbacks</h2>
+			<div class="feedbacks-slider">
+				<div class="feedback">
+					<div class="feedback-content">
+						<p class="feedback-heading">Juana Doe</p>
+						<p class="feedback-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit  anim id est laborum."</p>
+						<a href="#feedback-form" class="feedback-link">LEAVE YOUR FEEDBACK</a>
+
+						<div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
+							<form id="feedback-form" class="bookTraining-modal">
+								<p class="bookTraining-modal__heading">Write your feedback</p>
+								<p class="bookTraining-modal__text">Your name:</p><br>
+								<input class="bookTraining-modal__input" type="text" name="name"><br>
+								<p class="bookTraining-modal__text">Feedback:</p><br>
+								<textarea class="bookTraining-modal__input feedback-textarea" type="text" name="feedback" id="feedback" tabindex="4"></textarea><br>
+								<div class="feedback-file-upload">
+									<button class="file-upload__button" type="button">Add your photo</button><br>
+									<div>
+										<p class="file-upload__text" class="">No file choosen</p>
+									</div>
+									<input class="file-upload__input" type="file">
+								</div><br>
+								<button class="bookTraining-modal__sendButton">Send</button>
+							</form>
+						</div>
+
+					</div>
+					<div class="feedback-img">
+						<img src="images/pink-woman1.png" alt="client photo before training" class="feedback-img_left" id="feedback-img_left">
+						<img src="images/pink-woman2.png" alt="client photo after training" class="feedback-img_right" id="feedback-img_right">
+					</div>
+				</div>	
+				<div class="feedback">
+					<div class="feedback-content">
+						<p class="feedback-heading">Juana Doe</p>
+						<p class="feedback-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit  anim id est laborum."</p>
+						<a href="#feedback-form" class="feedback-link">LEAVE YOUR FEEDBACK</a>
+					</div>
+					<div class="feedback-img">
+						<img src="images/pink-woman1.png" alt="client photo before training" class="feedback-img_left" id="feedback-img_left">
+						<img src="images/pink-woman2.png" alt="client photo after training" class="feedback-img_right" id="feedback-img_right">
+					</div>
+				</div>	
+				<div class="feedback">
+					<div class="feedback-content">
+						<p class="feedback-heading">Juana Doe</p>
+						<p class="feedback-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit  anim id est laborum."</p>
+						<a href="#feedback-form" class="feedback-link">LEAVE YOUR FEEDBACK</a>
+					</div>
+					<div class="feedback-img">
+						<img src="images/pink-woman1.png" alt="client photo before training" class="feedback-img_left" id="feedback-img_left">
+						<img src="images/pink-woman2.png" alt="client photo after training" class="feedback-img_right" id="feedback-img_right">
+					</div>
+				</div>	
+			</div>
+		</section>
+
+		<section class="gallery" id="gallery">
+			<h2 class="gallery-heading">Gallery</h2>
+			<div id="dg-container" class="dg-container">
+				<div class="dg-wrapper">
+					<a href="#"><img src="images/training1.jpg" alt="image01"><div></div></a>
+					<a href="#"><img src="images/training1.jpg" alt="image02"><div></div></a>
+					<a href="#"><img src="images/training1.jpg" alt="image03"><div></div></a>
+					<a href="#"><img src="images/training1.jpg" alt="image04"><div></div></a>
+					<a href="#"><img src="images/training1.jpg" alt="image05"><div></div></a>
+					<a href="#"><img src="images/training1.jpg" alt="image06"><div></div></a>
+					<a href="#"><img src="images/training1.jpg" alt="image07"><div></div></a>
+					<a href="#"><img src="images/training1.jpg" alt="image08"><div></div></a>
+					<a href="#"><img src="images/training1.jpg" alt="image09"><div></div></a>
+					<a href="#"><img src="images/training1.jpg" alt="image10"><div></div></a>
+					<a href="#"><img src="images/training1.jpg" alt="image11"><div></div></a>
+					<a href="#"><img src="images/training1.jpg" alt="image12"><div></div></a>
+				</div>
+				<nav class="nav-left">	
+					<span class="dg-prev"></span>
+				</nav>
+				<nav class="nav-right">	
+					<span class="dg-next"></span>
+				</nav>
+			</div>
+		</section>
+
+		<section class="promotions wrapper">
+			<h2 class="promotions-heading">Uncoming Promotions</h2>
+			<div class="promotion">
+				<div class="promotion-days"><span class="promotion-days__day">7</span> <br><span class="promotion-days__text">days</span></div>
+				<div class="promotion-content">
+					<h3 class="promotion-content__caption">Special training</h3>
+					<p class="promotion-content__dates">01 SEP - 07 SEP</p>
+					<p class="promotion-content__text">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores 
+						officia aut vel facilis, ducimus doloremque harum dicta laborum repellat 
+						exercitationem id fuga libero!
+					</p>
+					<a href="#promotions-form" class="promotion-content__button">Join</a>
+
+					<div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
+						<form id="promotions-form" class="promotions-form">
+							<p class="promotions-form__heading">Fill the form</p>
+							<div class="promotions-form__infoBox">
+								<p class="infoBox__heading">Name of ivent</p>
+								<span class="infoBox__date">19.03.2017</span>
+							</div>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114964.47041570603!2d-80.30104416165085!3d25.782461762434902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2z0JzQsNC50LDQvNC4LCDQpNC70L7RgNC40LTQsCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1487592363036" id="google-map" frameborder="0" allowfullscreen></iframe><br>
+							<p class="bookTraining-modal__text">Name:</p><br>
+							<input class="bookTraining-modal__input" type="text" name="name"><br>
+							<p class="bookTraining-modal__text">Phone:</p><br>
+							<input class="bookTraining-modal__input" type="text" name="phone"><br>
+							<p class="bookTraining-modal__text">Email:</p><br>
+							<input class="bookTraining-modal__input" type="email" name="email"><br>
+							<button class="promotions-form__button">Join</button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+			<div class="promotion">
+				<div class="promotion-days"><span class="promotion-days__day">7</span> <br><span class="promotion-days__text">days</span></div>
+				<div class="promotion-content">
+					<h3 class="promotion-content__caption">Special training</h3>
+					<p class="promotion-content__dates">01 SEP - 07 SEP</p>
+					<p class="promotion-content__text">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores 
+						officia aut vel facilis, ducimus doloremque harum dicta laborum repellat 
+						exercitationem id fuga libero!
+					</p>
+					<a href="#promotions-form" class="promotion-content__button">Join</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="contacts" id="contacts">
+			<h2 class="contacts-heading">Contact Me</h2>
+			<div class="contacts-box wrapper">
+				<div class="contacts-left">
+					<div class="contacts-left__box1">
+						<a href="" class="contacts-link"><i class="fa fa-vk fa-3x" aria-hidden="true"></i></a>
+						<a href="" class="contacts-link"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+					</div>
+					<div class="contacts-left__box2">
+						<a href="" class="contacts-link"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+						<a href="" class="contacts-link"><i class="fa fa-youtube fa-3x" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<form action="/" method="post"> 
+				<div class="contacts-inputs">
+					<div class="field-wrap">
+						<input class="input_first" placeholder="Name:" type="text"/>
+					</div>
+					<div class="field-wrap">
+						<input placeholder="Email:" type="email"/>
+					</div>
+					<div class="field-wrap">
+						<textarea class="input-textarea input_last" name="message" id="message" tabindex="4" placeholder="Please write your question here..."></textarea>
+					</div>
+				</div>
+				</form>
+				<div class="contacts-right">
+					<div class="contacts-right_box">
+						<a href="" class="contacts-link contacts-link_right"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
+						<p class="contacts-right_discription">E-mail</p>
+					</div>
+					<div class="contacts-right_box">
+						<a href="" class="contacts-link contacts-link_right"><i class="fa fa-mobile fa-4x" aria-hidden="true"></i></a>
+						<p class="contacts-right_discription">Phone</p>
+					</div>
+					<div class="contacts-right_box">
+						<a href="" class="contacts-link contacts-link_right"><i class="fa fa-skype fa-3x" aria-hidden="true"></i></a>
+						<p class="contacts-right_discription">Skype</p>
+					</div>
+
+				</div>
+			</div>
+			<a href="#" class="contacts-button">Send</a>
+			<div class="contacts-icons_mobile">
+				<a href="" class="contacts-link_mobile"><i class="fa-3x fa fa-vk" aria-hidden="true"></i></a>
+				<a href="" class="contacts-link_mobile"><i class="fa-3x fa fa-facebook" aria-hidden="true"></i></a>
+				<a href="" class="contacts-link_mobile"><i class="fa-3x fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="" class="contacts-link_mobile"><i class="fa-3x fa fa-youtube" aria-hidden="true"></i></a>
+				<a href="" class="contacts-link_mobile"><i class="fa-3x fa fa-envelope-o" aria-hidden="true"></i></a>
+				<a href="" class="contacts-link_mobile"><i class="fa-3x fa fa-mobile" aria-hidden="true"></i></a>
+				<a href="" class="contacts-link_mobile"><i class="fa-3x fa fa-skype" aria-hidden="true"></i></a>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<img src="images/logo.png" alt="footer logo" class="footer-logo">
+		</footer>
+
+		
+		<script src="https://use.fontawesome.com/884393b4ef.js"></script>
+		
+		<!-- build:js js/main.js -->
+		<script src="js/libs/modernizr.custom.53451.js"></script>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		
+		<script src="js/libs/jquery.gallery.js"></script>
+
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+		<script src="bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+		<script src="js/main.js"></script>
+		<!-- endbuild -->
+	</body>
+</html>

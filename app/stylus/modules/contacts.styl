@@ -1,0 +1,138 @@
+.contacts {
+    background-color: gray-light;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-heading {
+        margin: 0;
+        padding: 40px 0 45px 0;
+        text-align: center;
+
+        font-size: 36px;
+    }
+    
+    &-box {
+        display: flex;
+        justify-content: center;
+    }
+    
+    &-left {
+        margin-top: 45px;
+
+        &__box1 {
+            margin-bottom: 25px;
+        }
+
+        &__box2 {
+
+        }
+    }
+
+    &-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_box {
+            display: flex;
+            align-items: center;
+        }
+
+        &_discription {
+            margin: 0;
+            font-size: 22px;
+        }
+
+    }
+
+    &-link {
+        padding: 25px;
+        color: main-black;
+
+        text-decoration: none;
+
+        &_right {
+            padding: 15px 20px;
+        }
+    }
+    &-link:hover {
+        color: main-black;
+        text-decoration: none;
+    }
+
+    &-inputs {
+        width: 81.5%;
+        margin: 0 45px 25px 45px;
+    }
+}
+
+.field-wrap {
+    font-size: 20px;
+    color: gray-dark;
+    width: 320px;
+
+    margin-bottom: 10px;
+}
+
+.input_first {
+    border-radius: 4px 4px 0 0;
+}
+
+.input_last {
+    border-radius: 0 0 4px 4px;
+
+}
+
+.input-textarea {
+    height: 200px;
+    resize: none;
+}
+
+input, textarea {
+    outline: none;
+
+    width: 100%;
+    padding: 7px 15px;
+
+    border: 2px solid gray-dark;
+    background-color: gray-light;
+}
+
+.contacts-icons_mobile {
+    display: none;
+}
+
+.contacts-link_mobile {
+    color: main-black;
+    margin-left: 10px;
+}
+
+.contacts-link_mobile:hover {
+    color: main-black;
+    text-decoration: none;
+}
+/////////////////////////////ADAPTIVE///////////////////////////////
+
+@media screen and (max-width: 760px) {
+    .contacts-left, .contacts-right {
+        display: none;
+    }
+
+    .contacts-inputs {
+        margin: 0;
+    }
+
+    .contacts-icons_mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 30px;
+    }
+
+    .field-wrap {
+        padding: 0 20px;
+    }
+}
