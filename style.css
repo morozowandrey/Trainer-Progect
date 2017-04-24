@@ -23,6 +23,7 @@ html {
   font-size: 16px;
   line-height: 22px;
   height: 100%;
+  margin-right: 0 !important;
 }
 body {
   margin: 0;
@@ -291,9 +292,17 @@ textarea {
   margin: 0 0 0 10px;
   font-family: 'Calibri', 'sans pro', 'serif';
   font-size: 18px;
+  color: white;
 }
 .header-contacts__phoneIcon {
   margin-left: 10px;
+}
+#SkypeButton_Call_warrior_ua1_1 img {
+  margin: 0 0 0 10px !important;
+  vertical-align: middle !important;
+}
+#SkypeButton_Call_warrior_ua1_1 p {
+  margin: 0 !important;
 }
 .header-contacts__langEn,
 .header-contacts__langRu {
@@ -856,13 +865,15 @@ textarea {
 .feedbacks-heading {
   font-weight: 400;
   font-size: 4rem;
-  margin: 0 0 70px 0;
+  margin: 0 0 40px 0;
   padding-top: 70px;
   text-align: center;
 }
 .feedback-content {
   float: left;
-  width: 50%;
+  width: 80%;
+  margin-left: 20%;
+  transform: translateX(-20%);
 }
 .feedback-img {
   float: left;
@@ -1019,9 +1030,6 @@ textarea {
     top: 85px;
     right: 0;
   }
-}
-.slick-cloned {
-  height: 355px !important;
 }
 .contacts {
   background-color: #c3c3bf;
@@ -1908,7 +1916,7 @@ textarea {
 /* Dots */
 .slick-dotted.slick-slider.slick-slider-gallery
 {
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     height: 280px;
 }
 .slick-dotted.slick-slider

@@ -12,9 +12,20 @@
 				<div class="header" id="header">
 					<div class="header-contacts wrapper">
 							<div class="header-contacts__left">
-								<a href=""><i class="fa fa-whatsapp fa-2x header-contacts__whatsapp" aria-hidden="true"></i></a>
-								<i class="fa fa-skype fa-2x header-contacts__phoneIcon" aria-hidden="true"></i>
-								<p class="header-contacts__phone">305-680-2247</p>
+								<!--<a href=""><i class="fa fa-whatsapp fa-2x header-contacts__whatsapp" aria-hidden="true"></i></a>-->
+								<script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+								<div class="header-contacts__skype" id="SkypeButton_Call_warrior_ua1_1">
+								<script type="text/javascript">
+									Skype.ui({
+										"name": "chat",
+										"element": "SkypeButton_Call_warrior_ua1_1",
+										"participants": ["warrior_ua1"],
+										"imageColor": "white",
+										"imageSize": 24
+									});
+								</script>
+								</div>
+								<a href="tel:+13056802247" class="header-contacts__phone">+1 305 680 2247</a>
 								<a href="#book-form" class="header-calendar-button"><span class="calendar-button__text">book online <br>training</span></a>
 
 								<div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
@@ -28,14 +39,15 @@
 										<input class="bookTraining-modal__input bookTraining-modal__input_mapMarker" type="text" name="adress"><br>
 										<button class="bookTraining-modal__sendButton">Send</button>
 									</form>
+
 								</div>
 								
 							</div>
 							<div class="header-contacts__right">
-								<a href="" class="header-contacts__rightSocials"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
-								<a href="" class="header-contacts__rightSocials"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-								<a href="" class="header-contacts__rightSocials"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-								<a href="" class="header-contacts__rightSocials"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a>
+								<a href="https://www.youtube.com/channel/UC0D3S8T_xbOP_zb7qteevKg" class="header-contacts__rightSocials"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+								<a href="https://www.instagram.com/kplyshko_fitnessmiami" class="header-contacts__rightSocials"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+								<a href="https://www.facebook.com/kplyshko" class="header-contacts__rightSocials"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+								<a href="https://vk.com/kplyshko" class="header-contacts__rightSocials"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a>
 								<a href=""><p class="header-contacts__langEn">en</p></a>
 								<a href=""><p class="header-contacts__langRu">ru</p></a>
 							</div>

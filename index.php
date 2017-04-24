@@ -58,7 +58,6 @@
 					</div>
 				</div>
 			</div>
-
 		</section>
 
 		<section class="training wrapper flex" id="classes">
@@ -143,95 +142,50 @@
 			</div>
 		</section>
 
-
-		
-
-	
-		
 		<section class="feedbacks wrapper" id="feedbacks">
 			<h2 class="feedbacks-heading">Feedbacks</h2>
 			<div class="feedbacks-slider">
-<?php
-			$connection = mysql_connect("localhost", "admin", "12345");
-			$connectedDe = mysql_select_db('wptest');
-			if(!$connection || $connectedDe){
-				mysql_error();
-			}
-
-			$result = mysql_query("SELECT * FROM testimonials");
-			mysql_close();
-
-			$row = mysql_fetch_array($result);
 			
-			while($row = mysql_fetch_assoc($result))
-{?>
+			<?php
+				$connection = mysql_connect("localhost", "admin", "12345");
+				$connectedDe = mysql_select_db('wptest');
+				if(!$connection || $connectedDe){
+					mysql_error();
+				}
+
+				$result = mysql_query("SELECT * FROM testimonials");
+				mysql_close();
+
+				$row = mysql_fetch_array($result);
+
+				$start_limit = 0;
+				$limit = 6;
+
+				while($row = mysql_fetch_array($result))
+			{?>
 				<div class="feedback">
 					<div class="feedback-content">
-						<p class="feedback-heading"><?php echo $row['title'] ?></p>
-						<p class="feedback-text"><?php echo $row['text'] ?></p>
+						<p class="feedback-heading"><?php echo $row['name'] ?></p>
+						<p class="feedback-text"><?php echo $row['feedback'] ?></p>
 						<a href="#feedback-form" class="feedback-link">LEAVE YOUR FEEDBACK</a>
-
-						<div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
-							<form id="feedback-form" class="bookTraining-modal" method="post" action="index.php" enctype="multipart/form-data">
-								<p class="bookTraining-modal__heading">Write your feedback</p>
-								<p class="bookTraining-modal__text">Your name:</p><br>
-								<input class="bookTraining-modal__input" type="text" name="name"><br>
-								<p class="bookTraining-modal__text">Feedback:</p><br>
-								<textarea class="bookTraining-modal__input feedback-textarea" type="text" name="feedback" id="feedback" tabindex="4" maxlength="500"></textarea><br>
-								<div class="feedback-file-upload">
-									<input class="file-upload__input" type="file" name="image">
-								</div><br>
-								<button class="bookTraining-modal__sendButton" name="send">Send</button>
-							</form>
-						</div>
-
-					</div>
-					<div class="feedback-img">
-						<?php echo "<img src='" . $row['image'] . "' alt='photo before training' class='feedback-img_left' id='feedback-img_left' />";?>
-						<?php echo "<img src='" . $row['img-after_training'] . "' alt='photo after training' class='feedback-img_right' id='feedback-img_right' />";?>
 					</div>
 				</div>
 			<?php }?>
-
-			<?php
-							if (isset($_POST['send'])) {
-								// $target = "images/".basename($_FILES['image']['name']);
-								if(getimagesize($_FILES['image']['tmp_name']) == false){
-									echo 'Please select an image.';
-								}else{
-									$image = addslashes($_FILES['image']['tmp_name']);
-									$name = addslashes($_FILES['image']['name']);
-									$image = file_get_contents($image);
-									$image = base64_encode($image);
-									$connection = mysql_connect("localhost", "admin", "12345");
-									mysql_select_db('wptest',$connection);
-									$sql = ("INSERT INTO testimonials (title, image) VALUES ('$name', '$image')");
-									$results = mysql_query($sql, $connection);
-
-									
-								}
-							}
-							// function saveimage($name,$image) {
-							// 		$connection = mysql_connect("localhost", "admin", "12345");
-							// 		mysql_select_db('wptest',$connection);
-							// 		$sql = ("INSERT INTO image (name, image) VALUES ('$name', '$image')");
-							// 		$result = mysql_query($sql, $connection);
-
-							// 		// $name = $_POST['name'];
-							// 		// $feedback = $_POST['feedback'];
-							// 		// $image = $_FILES['image']['name'];
-
-									
-							// 		// if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){
-							// 		// 	$msg ='пээзда';
-							// 		// }else {
-							// 		// 	$msg ='не гони';
-							// 		// }
-							// 	}
-
-							
-						?>
 			</div>
+
+			<?php include_once("testimonials.php") ?>
+			<div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
+				<form id="feedback-form" class="bookTraining-modal" method="post" enctype="multipart/form-data">
+					<p class="bookTraining-modal__heading">Write your feedback</p>
+					<p class="bookTraining-modal__text">Your name:</p><br>
+					<input class="bookTraining-modal__input" type="text" name="name" autocomplete="off"><br>
+					<p class="bookTraining-modal__text">Feedback:</p><br>
+					<textarea class="bookTraining-modal__input feedback-textarea" autocomplete="off" type="text" name="feedback" id="feedback" tabindex="4" maxlength="500" autocomplete="off"></textarea><br>
+					<input class="bookTraining-modal__sendButton" type="submit" name="send" value="Send" action="testimonials.php">
+				</form>
+			</div>
+			
+
 		</section>
 
 		<section class="gallery" id="gallery">
