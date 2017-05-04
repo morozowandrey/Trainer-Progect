@@ -144,48 +144,34 @@
 
 		<section class="feedbacks wrapper" id="feedbacks">
 			<h2 class="feedbacks-heading">Feedbacks</h2>
-			<div class="feedbacks-slider">
-			
-			<?php
-				$connection = mysql_connect("localhost", "admin", "12345");
-				$connectedDe = mysql_select_db('wptest');
-				if(!$connection || $connectedDe){
-					mysql_error();
-				}
-
-				$result = mysql_query("SELECT * FROM testimonials");
-				mysql_close();
-
-				$row = mysql_fetch_array($result);
-
-				$start_limit = 0;
-				$limit = 6;
-
-				while($row = mysql_fetch_array($result))
-			{?>
-				<div class="feedback">
-					<div class="feedback-content">
-						<p class="feedback-heading"><?php echo $row['name'] ?></p>
-						<p class="feedback-text"><?php echo $row['feedback'] ?></p>
-						<a href="#feedback-form" class="feedback-link">LEAVE YOUR FEEDBACK</a>
-					</div>
-				</div>
-			<?php }?>
-			</div>
-
-			<?php include_once("testimonials.php") ?>
-			<div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
-				<form id="feedback-form" class="bookTraining-modal" method="post" enctype="multipart/form-data">
+            <div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
+				<form id="feedback-form" class="bookTraining-modal" method="post" enctype="multipart/form-data"  action="testimonials.php">
 					<p class="bookTraining-modal__heading">Write your feedback</p>
 					<p class="bookTraining-modal__text">Your name:</p><br>
 					<input class="bookTraining-modal__input" type="text" name="name" autocomplete="off"><br>
 					<p class="bookTraining-modal__text">Feedback:</p><br>
 					<textarea class="bookTraining-modal__input feedback-textarea" autocomplete="off" type="text" name="feedback" id="feedback" tabindex="4" maxlength="500" autocomplete="off"></textarea><br>
-					<input class="bookTraining-modal__sendButton" type="submit" name="send" value="Send" action="testimonials.php">
+					<button class="bookTraining-modal__sendButton" type="submit" name="send">Send</button>
 				</form>
 			</div>
-			
 
+			<div class="feedbacks-slider">
+			<?php
+			    global $wpdb;
+				$testimonials = $wpdb->get_results( "SELECT name,feedback FROM testimonials" );
+				foreach($testimonials as $testimonial):
+			?>
+				<div class="feedback">
+					<div class="feedback-content">
+						<p class="feedback-heading"><?= $testimonial->name ?></p>
+						<p class="feedback-text"><?= $testimonial->feedback ?></p>
+						<a href="#feedback-form" class="feedback-link">LEAVE YOUR FEEDBACK</a>
+					</div>
+				</div>
+			<?php 
+			endforeach;
+			?>
+			</div>
 		</section>
 
 		<section class="gallery" id="gallery">
