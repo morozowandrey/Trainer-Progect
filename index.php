@@ -147,9 +147,9 @@
             <div class="hidden" id="bookTraining-modal" tabindex="-1" role="dialog" aria-labelledby="bookTraining-modalLabel">
 				<form id="feedback-form" class="bookTraining-modal" method="post" enctype="multipart/form-data"  action="testimonials.php">
 					<p class="bookTraining-modal__heading">Write your feedback</p>
-					<p class="bookTraining-modal__text">Your name:</p><br>
+					<p class="bookTraining-modal__text">Your name: <span class="form-error" attr="Please enter your name"></span></p><br>
 					<input class="bookTraining-modal__input" type="text" name="name" autocomplete="off"><br>
-					<p class="bookTraining-modal__text">Feedback:</p><br>
+					<p class="bookTraining-modal__text">Feedback: <span class="form-error" attr="Please enter your feedback"></span></p><br>
 					<textarea class="bookTraining-modal__input feedback-textarea" autocomplete="off" type="text" name="feedback" id="feedback" tabindex="4" maxlength="500" autocomplete="off"></textarea><br>
 					<button class="bookTraining-modal__sendButton" type="submit" name="send">Send</button>
 				</form>

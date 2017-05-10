@@ -17,30 +17,32 @@ $(window).on('load', function(){
 });
 
 $(document).ready(function(){
-    // console.log(123);
-    // console.log($('#feedback-form'));
 $('#feedback-form').on('submit',function(e){
-   console.log(123);
    e.preventDefault();
    e.stopPropagation();
-   //TODO: validation
-   //if all fields are valid
-   $.ajax({
-      method: "POST",
-      url: "wp-content/themes/personal_trainer/testimonials.php",
-      data: $('#feedback-form').serialize(),
-      success: function(msg){
-          console.log('success');
-          console.log(msg);
-        //   пройтись по всему массиву с foreach и забрать ключи  
-        // выводить сообщения об ошибке или успеха, валидация        
-        //   if(msg.name.length!=0){
-        //       $('[name="name"]').after(msg);
-        //   }
-      },
-      error: function(msg){
-          console.log(msg);
-      }
-   });
+    $.ajax({
+        method: "POST",
+        url: "wp-content/themes/personal_trainer/testimonials.php",
+        data: $('#feedback-form').serialize(),
+        success: function(msg){
+            var callback = msg;
+            $(".form-error")[0].innerHTML = "";
+            $(".form-error")[1].innerHTML = "";
+            if (msg.name){
+                $(".form-error")[0].innerHTML = "Please enter your name";
+            }
+            else if (msg.feedback){
+                $(".form-error")[1].innerHTML = "Please enter your feedback";
+            }else {
+                $(".mfp-close").click();
+            }
+        },
+        error: function(msg){
+            console.log("false");
+
+        }
+
+    });
+
 });
 });
